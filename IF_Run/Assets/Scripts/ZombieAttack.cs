@@ -70,5 +70,9 @@ public class ZombieAttack : MonoBehaviour {
             // ... damage the player.
             playerHealth.TakeDamage(attackDamage);
         }
+        if (playerHealth.currentHealth < 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

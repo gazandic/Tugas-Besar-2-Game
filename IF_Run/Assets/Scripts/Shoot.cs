@@ -3,8 +3,10 @@ using System.Collections;
 
 public class Shoot : MonoBehaviour {
     public GameObject rocketPrefab;
+    public AudioSource audio;
     void Update () {
         if (Input.GetMouseButtonDown(0)) {
+            audio.Play();
             foreach (Collider c in GetComponentsInChildren<Collider>())
             {
                 c.isTrigger = true;
